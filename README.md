@@ -250,37 +250,41 @@ Alternatives to our own versions:
     wrapper around the original unmodified library installable via npm, which
     packs the Google Closure library, about 420 KB in size.
 
-
-# Deploy
-
-## Configure maven settings
-
-At your `~/.m2/settings.xml` file add:
-
-```xml
+# Deploy:
+Update your ~/.m2/settings.yml
+```
 <settings>
-    <profiles>
-        <profile>
-            <id>myMavenRepo</id>
-            <activation>
-                <property>
-                    <name>!doNotUseMyMavenRepo</name>
-                </property>
-            </activation>
-            <properties>
-                <myMavenRepo.read.url>PASTE_READ_URL</myMavenRepo.read.url>
-                <myMavenRepo.write.url>PASTE_WRITE_URL</myMavenRepo.write.url>
-            </properties>
-        </profile>
-    </profiles>
-</settings>
+  <servers>
+    <server>
+      <id>maven-4p</id>
+      <username>...</username>
+      <password>...</password>
+      <configuration>
+        <region>us-east-1</region>
+        <publicRepository>false</publicRepository>
+      </configuration>
+    </server>
 
+    <server>
+      <id>public-maven-4p</id>
+      <username>...</username>
+      <password>...</password>
+      <configuration>
+        <region>us-east-1</region>
+        <publicRepository>true</publicRepository>
+      </configuration>
+    </server>
+
+    <server>
+      <id>4p-my-maven-repo</id>
+      <url>https://mymavenrepo.com/repo/J4yLiGooDXJRjOOFrWjB</url>
+    </server>
+  </servers>
+</settings>
 ```
 
-## Run deploy
-
-```bash
-cd java/libphonenumber
+Run this command at `java/libphonenumber`
+```
 mvn deploy
 ```
 

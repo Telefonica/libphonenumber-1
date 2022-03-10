@@ -283,9 +283,9 @@ Update your ~/.m2/settings.yml
 </settings>
 ```
 
-Run this command at `java/libphonenumber`
+Run this command at the root folder
 ```
-mvn deploy
+JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/ mvn deploy -pl com.googlecode.libphonenumber:libphonenumber
 ```
 
 > Note: consider updating the version at the pom.xml before deploying lib

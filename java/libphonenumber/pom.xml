@@ -19,6 +19,15 @@
   </properties>
 
   <build>
+
+    <extensions>
+      <extension>
+        <groupId>com.gkatzioura.maven.cloud</groupId>
+        <artifactId>s3-storage-wagon</artifactId>
+        <version>1.8</version>
+      </extension>
+    </extensions>
+    
     <sourceDirectory>src</sourceDirectory>
     <testSourceDirectory>test</testSourceDirectory>
     <resources>

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.googlecode.libphonenumber</groupId>
   <artifactId>libphonenumber</artifactId>
-  <version>8.12.25-4p</version>
+  <version>9.0.4-4p</version>
   <packaging>jar</packaging>
   <url>https://github.com/google/libphonenumber/</url>
 

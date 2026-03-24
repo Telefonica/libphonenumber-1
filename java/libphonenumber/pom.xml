@@ -149,7 +149,7 @@
     <repository>
       <!--
       <id>maven-4p</id>
-      <url>s3://4p-maven/snapshots</url>
+      <url>s3://nexo-maven/snapshots</url>
       -->
 
       <id>public-maven-4p</id>
@@ -162,8 +162,8 @@
       -->
     </repository>
     <snapshotRepository>
-      <id>maven-4p</id>
-      <url>s3://4p-maven/snapshots</url>
+      <id>maven-nexo</id>
+      <url>s3://nexo-maven/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
